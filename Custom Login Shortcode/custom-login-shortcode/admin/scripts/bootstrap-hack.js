@@ -6,13 +6,13 @@ if (!document.getElementById(bootstrapCss))
     bootstrapWrapper.id = bootstrapCss;
     bootstrapWrapper.rel = 'stylesheet/less';
     bootstrapWrapper.type = 'text/css';
-    bootstrapWrapper.href = '../wp-content/plugins/brokenfruit-shortcodes/css/bootstrap-wrapper.less';
+    bootstrapWrapper.href = '../wp-content/plugins/custom-login-shortcode/admin/css/bootstrap-wrapper.less';
     bootstrapWrapper.media = 'all';
     head.appendChild(bootstrapWrapper);
 	
     var lessjs = document.createElement('script');
     lessjs.type = 'text/javascript';
-    lessjs.src = '../wp-content/plugins/brokenfruit-shortcodes/scripts/less.min.js';
+    lessjs.src = '../wp-content/plugins/custom-login-shortcode/admin/scripts/less.min.js';
     head.appendChild(lessjs);
 
     //load other stylesheets that override bootstrap styles here, using the same technique from above
@@ -21,7 +21,7 @@ if (!document.getElementById(bootstrapCss))
     customStyles.id = "customStyles";
     customStyles.rel = 'stylesheet';
     customStyles.type = 'text/css';
-    customStyles.href = '../wp-content/plugins/brokenfruit-shortcodes/css/styles.css';
+    customStyles.href = '../wp-content/plugins/custom-login-shortcode/admin/css/admin_styles.css';
     customStyles.media = 'all';
     head.appendChild(customStyles);
 }

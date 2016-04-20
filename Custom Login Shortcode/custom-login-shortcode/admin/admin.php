@@ -56,6 +56,7 @@ function clsc_enqueue_scripts() {
     	wp_enqueue_style( 'custom-shortcodes-styles', plugins_url( 'admin/css/admin_styles.css', dirname(__FILE__) ) );
     	wp_enqueue_style( 'bootstrap', plugins_url('admin/css/bootstrap.css', dirname(__FILE__) ) );
     	wp_enqueue_script('admin_js_bootstrap_hack', plugins_url('admin/scripts/bootstrap-hack.js', dirname(__FILE__) ) );
+    	wp_enqueue_script('jquery', plugins_url('admin/scripts/jquery.min.js', dirname(__FILE__) ) );
 	
 }
 add_action('admin_enqueue_scripts', 'clsc_enqueue_scripts' );
@@ -68,8 +69,6 @@ function clsc_html_page()
     }
 
     ?>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
     <script type="text/javascript">
 
