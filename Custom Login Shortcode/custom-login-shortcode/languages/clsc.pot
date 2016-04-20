@@ -1,0 +1,132 @@
+# Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Login Shortcode\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Wed Apr 20 2016 18:09:43 GMT+0200 (CEST)\n"
+"POT-Revision-Date: Wed Apr 20 2016 18:09:48 GMT+0200 (CEST)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#. Name of the plugin
+msgid "Custom Login Shortcode"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://www.brokenfruit.dk"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Add custom login shortcode to your website. When you are logged out you'll "
+"see a 'Log in'. When you are logged in, you'll see a 'My account' and a 'Log "
+"out'."
+msgstr ""
+
+#. Author of the plugin
+msgid "Kenn Nielsen"
+msgstr ""
+
+#: ../admin/admin.php:67
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: ../admin/admin.php:99
+msgid "To use for shortcode:"
+msgstr ""
+
+#: ../admin/admin.php:104
+msgid "Log in link:"
+msgstr ""
+
+#: ../admin/admin.php:105
+msgid "Example: log-in/"
+msgstr ""
+
+#: ../admin/admin.php:108
+msgid "Log in string:"
+msgstr ""
+
+#: ../admin/admin.php:109
+msgid "Example: Log in"
+msgstr ""
+
+#: ../admin/admin.php:112
+msgid "Log in class:"
+msgstr ""
+
+#: ../admin/admin.php:113
+msgid "Example: login_style"
+msgstr ""
+
+#: ../admin/admin.php:118
+msgid "Log out link:"
+msgstr ""
+
+#: ../admin/admin.php:119
+msgid "Example: log-out/"
+msgstr ""
+
+#: ../admin/admin.php:120
+msgid "Use default logout link"
+msgstr ""
+
+#: ../admin/admin.php:123
+msgid "Log out string:"
+msgstr ""
+
+#: ../admin/admin.php:124
+msgid "Example: Log out"
+msgstr ""
+
+#: ../admin/admin.php:127
+msgid "Log out class:"
+msgstr ""
+
+#: ../admin/admin.php:128
+msgid "Example: logout_style"
+msgstr ""
+
+#: ../admin/admin.php:133
+msgid "Account link:"
+msgstr ""
+
+#: ../admin/admin.php:134
+msgid "Example: my-account/"
+msgstr ""
+
+#: ../admin/admin.php:137
+msgid "Account string:"
+msgstr ""
+
+#: ../admin/admin.php:138
+msgid "Example: My Account"
+msgstr ""
+
+#: ../admin/admin.php:141
+msgid "Account class:"
+msgstr ""
+
+#: ../admin/admin.php:142
+msgid "Example: account_style"
+msgstr ""
+
+#: ../admin/admin.php:147
+msgid "Save Changes"
+msgstr ""
