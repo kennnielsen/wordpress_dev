@@ -1,0 +1,20 @@
+.bootstrap-wrapper {
+  @import (less) url( 'bootstrap.css' );
+  max-width: 90%;
+}
+
+.row {
+  margin:0!important;
+}
+
+.top-buffer { 
+  margin-top:20px!important; 
+}
+
+.shortcode-preview{
+	padding: 7px 11px;
+	background-color: #F3F3F7;
+	border: 1px solid #DEDEE3;
+	font: 12px/17px monospace;
+	display: inline-block;
+}
