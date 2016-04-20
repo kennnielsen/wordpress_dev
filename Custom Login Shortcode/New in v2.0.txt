@@ -1,0 +1,1 @@
+2.0The plugin are now made to be use by anyone!- New: Add your own text string to be shown- New: Add your own class to be used for each tag- Minor bug fixes and improvements
