@@ -18,3 +18,8 @@
 	font: 12px/17px monospace;
 	display: inline-block;
 }
+
+#logout-default{
+	margin-top: 10px;
+	padding: 3px 6px;
+}

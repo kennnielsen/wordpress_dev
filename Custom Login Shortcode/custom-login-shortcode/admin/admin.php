@@ -9,13 +9,13 @@ register_activation_hook( PLUGIN_MAIN_FILE, 'clsc_install');
 function clsc_install() {
 	$clsc_options = array(
 
-		'Login_link' 		=> '/log-in/',
+		'Login_link' 		=> 'log-in/',
 		'Login_string' 		=> __('Log in', 'clsc'),
 		'Login_class'		=> '', // Default is empty to inherit theme styles
 		'Logout_link'		=> wp_logout_url( home_url()),
 		'Logout_string'		=> __('Log out', 'clsc'),
 		'Logout_class'		=> '', // Default is empty to inherit theme styles
-		'Account_link' 		=> '/my-account/',
+		'Account_link' 		=> 'my-account/',
 		'Account_string'	=> __('My Account', 'clsc'),
 		'Account_class'		=> '' // Default is empty to inherit theme styles
 
@@ -68,6 +68,19 @@ function clsc_html_page()
     }
 
     ?>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+    	var default_logout = <?php echo json_encode( wp_logout_url( home_url()) ); ?>;
+
+    	$(document).ready(function(){
+		    $("#logout-default").click(function(){
+		        $("#logout-field").val(default_logout);
+		    });
+		});
+    </script>
 
     <div class="wrap">
 
@@ -75,8 +88,8 @@ function clsc_html_page()
             <?php 
 
             $options = get_option('clsc_options_array');     
-            @settings_fields('wp_plugin_template-group');
-            @do_settings_fields('wp_plugin_template-group'); 
+            settings_fields('wp_plugin_template-group');
+            do_settings_fields('wp_plugin_template-group'); 
 
             ?>          
             <div class="bootstrap-wrapper">
@@ -89,7 +102,7 @@ function clsc_html_page()
 	            <div class="row" id="login-content">
 	                <div class="col-md-4">
 	                    <h5><?php _e('Log in link:','clsc'); ?></h5>
-	                    <input name="clsc_options_array[Login_link]" placeholder="<?php _e('Example: /log-in/', 'clsc') ?>" class="form-control" type="text" value="<?php echo $options['Login_link']; ?>" />
+	                    <input name="clsc_options_array[Login_link]" placeholder="<?php _e('Example: log-in/', 'clsc') ?>" class="form-control" type="text" value="<?php echo $options['Login_link']; ?>" />
 	                </div>
 	                <div class="col-md-4">
 	                    <h5><?php _e('Log in string:','clsc'); ?></h5>
@@ -103,7 +116,8 @@ function clsc_html_page()
 	            <div class="row top-buffer" id="logout-content">
 	                <div class="col-md-4">
 	                    <h5><?php _e('Log out link:','clsc'); ?></h5>
-	                    <input name="clsc_options_array[Logout_link]" placeholder="<?php _e('Example: /log-out/', 'clsc') ?>" class="form-control" type="text" value="<?php echo $options['Logout_link']; ?>" />
+	                    <input id="logout-field" name="clsc_options_array[Logout_link]" placeholder="<?php _e('Example: log-out/', 'clsc') ?>" class="form-control" type="text" value="<?php echo $options['Logout_link']; ?>" />
+	                	<input class="btn btn-default btn-xs" type="button" name="logout-default" id="logout-default" value="<?php _e('Use default logout link','clsc') ?>"/>
 	                </div>
 	                <div class="col-md-4">
 	                    <h5><?php _e('Log out string:','clsc'); ?></h5>
@@ -117,7 +131,7 @@ function clsc_html_page()
 	            <div class="row top-buffer" id="account-content">
 	                <div class="col-md-4">
 	                    <h5><?php _e('Account link:','clsc'); ?></h5>
-	                    <input name="clsc_options_array[Account_link]" placeholder="<?php _e('Example: /my-account/', 'clsc') ?>" class="form-control" type="text" value="<?php echo $options['Account_link']; ?>" />
+	                    <input name="clsc_options_array[Account_link]" placeholder="<?php _e('Example: my-account/', 'clsc') ?>" class="form-control" type="text" value="<?php echo $options['Account_link']; ?>" />
 	                </div>
 	                <div class="col-md-4">
 	                    <h5><?php _e('Account string:','clsc'); ?></h5>
@@ -130,7 +144,7 @@ function clsc_html_page()
 	            </div>            
         	</div>
 
-            <?php @submit_button( __('Save Changes', 'clsc') ); ?>
+            <?php submit_button( __('Save Changes', 'clsc') ); ?>
 
         </form>
 
