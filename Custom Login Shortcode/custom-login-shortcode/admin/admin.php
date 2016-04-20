@@ -1,5 +1,7 @@
 <?php 
 
+echo 'yes';
+ 
 // Meaning of abbreviations:
 // clsc = Custom login shortcode
 
