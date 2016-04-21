@@ -52,12 +52,8 @@ function clsc_enqueue_scripts() {
 	if ( $screen->id != 'settings_page_custom-login-shortcodes' ) {
 		return; // exit if incorrect screen id
 	} 
-
-    	wp_enqueue_style( 'custom-shortcodes-styles', plugins_url( 'admin/css/admin_styles.css', dirname(__FILE__) ) );
-    	wp_enqueue_style( 'bootstrap', plugins_url('admin/css/bootstrap.css', dirname(__FILE__) ) );
-    	wp_enqueue_script('admin_js_bootstrap_hack', plugins_url('admin/scripts/bootstrap-hack.js', dirname(__FILE__) ) );
-    	wp_enqueue_script('jquery', plugins_url('admin/scripts/jquery.min.js', dirname(__FILE__) ) );
-	
+    
+    wp_enqueue_script('admin_js_bootstrap_hack', plugins_url('admin/scripts/bootstrap-hack.js', dirname(__FILE__) ) );
 }
 add_action('admin_enqueue_scripts', 'clsc_enqueue_scripts' );
 
@@ -72,11 +68,13 @@ function clsc_html_page()
 
     <script type="text/javascript">
 
+    	$j = jQuery.noConflict();
+
     	var default_logout = <?php echo json_encode( wp_logout_url( home_url()) ); ?>;
 
-    	$(document).ready(function(){
-		    $("#logout-default").click(function(){
-		        $("#logout-field").val(default_logout);
+    	$j(document).ready(function(){
+		    $j("#logout-default").click(function(){
+		        $j("#logout-field").val(default_logout);
 		    });
 		});
     </script>
@@ -140,11 +138,17 @@ function clsc_html_page()
 	                    <h5><?php _e('Account class:','clsc'); ?></h5>
 	                    <input name="clsc_options_array[Account_class]" placeholder="<?php _e('Example: account_style', 'clsc') ?>" class="form-control" type="text" value="<?php echo $options['Account_class']; ?>" />
 	                </div>
-	            </div>            
-        	</div>
+	            </div>
+	            <div class="row top-buffer" id="submit">
+	                <div class="col-md-4">
+	                    <input class="btn btn-primary" type="submit" name="submit" id="submit" value="<?php _e('Save Changes', 'clsc') ?>" />
+	                </div>
+	            </div> 
 
-            <?php submit_button( __('Save Changes', 'clsc') ); ?>
+            <!--<?php submit_button( __('Save Changes', 'clsc') ); ?>-->
 
+            </div>
+            
         </form>
 
     </div>
