@@ -2,8 +2,8 @@
 /*
 Plugin Name: Custom Login Shortcode
 Plugin URI: https://www.brokenfruit.dk/
-Description: Add custom login shortcode to your website. When you are logged out you'll see a 'Log in'. When you are logged in, you'll see a 'My account' and a 'Log out'.
-Version: 2.0
+Description: Adds a custom login shortcode to be used anywhere on your website. Outputs a simple href attributes with links, strings and classes defined by you.
+Version: 1.0
 Author: Kenn Nielsen
 Author URI: https://www.brokenfruit.dk/
 Text Domain: clsc
@@ -24,7 +24,6 @@ if ( is_admin() ) {
 // Enqueue front end styles
 function clsc_enqueue_frontend() {
 
-	wp_enqueue_style( 'clsc_frontend_styles', plugins_url( '/css/styles.css', __FILE__ ) );
 	wp_enqueue_style( 'clsc_FontAwesome', plugins_url( '/fonts/FontAwesome/css/font-awesome.min.css', __FILE__) );
 
 }

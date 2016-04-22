@@ -5,6 +5,7 @@
 
 // Runs when plugin is activated
 register_activation_hook( PLUGIN_MAIN_FILE, 'clsc_install');
+
 // Create new database fields
 function clsc_install() {
 	$clsc_options = array(
@@ -41,10 +42,9 @@ function add_clsc_option_page() {
 		'custom-login-shortcodes', 	// The unique slug name to refer to this menu
 		'clsc_html_page');			// The function to output the page content
 }
-/* Call the html code */
 add_action('admin_menu', 'add_clsc_option_page');
 
-// Enqueue admin styles and scripts
+// Enqueue admin scripts
 function clsc_enqueue_scripts() {
 	global $wpdb;
 	$screen = get_current_screen();
@@ -57,8 +57,8 @@ function clsc_enqueue_scripts() {
 }
 add_action('admin_enqueue_scripts', 'clsc_enqueue_scripts' );
 
-function clsc_html_page()
-{
+function clsc_html_page() {
+
     if(!current_user_can('manage_options'))
     {
         wp_die( __('You do not have sufficient permissions to access this page.','clsc') );
@@ -77,6 +77,7 @@ function clsc_html_page()
 		        $j("#logout-field").val(default_logout);
 		    });
 		});
+
     </script>
 
     <div class="wrap">
@@ -144,15 +145,11 @@ function clsc_html_page()
 	                    <input class="btn btn-primary" type="submit" name="submit" id="submit" value="<?php _e('Save Changes', 'clsc') ?>" />
 	                </div>
 	            </div> 
-
-            <!--<?php submit_button( __('Save Changes', 'clsc') ); ?>-->
-
             </div>
-            
         </form>
-
     </div>
 
     <?php
 }
+
 ?>
