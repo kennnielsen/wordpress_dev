@@ -42,10 +42,10 @@ add_action( 'plugins_loaded', 'clsc_load_plugin_textdomain' );
 
 function custom_login_shortcode ( $atts, $content = null ){
 
-    if ( is_user_logged_in() ) {
-        
-        // get options from database and put it into $options variable. Ensure a single call to db.
+    // get options from database and put it into $options variable. Ensure a single call to db.
         $options = get_option('clsc_options_array');
+
+    if ( is_user_logged_in() ) {
 
         $output = '<a href="';
         $output .= $options['Account_link'];
