@@ -40,45 +40,48 @@ add_action( 'plugins_loaded', 'clsc_load_plugin_textdomain' );
 /*          Custom login shortcode - start           */
 /*---------------------------------------------------*/
 
-function custom_login_shortcode ( $atts, $content = null ){
+if (!function_exists(custom_login_shortcode)) {
 
-    // get options from database and put it into $options variable. Ensure a single call to db.
-        $options = get_option('clsc_options_array');
+    function custom_login_shortcode ( $atts, $content = null ){
 
-    if ( is_user_logged_in() ) {
+        // get options from database and put it into $options variable. Ensure a single call to db.
+            $options = get_option('clsc_options_array');
 
-        $output = '<a href="';
-        $output .= $options['Account_link'];
-        $output .= '" class="';
-        $output .= $options['Account_class'];
-        $output .= '"><i class="fa icon-user"></i>';
-        $output .= $options['Account_string']; 
-        $output .= '</a> | <a href="';
-        $output .= $options['Logout_link'];
-        $output .= '" class="';
-        $output .= $options['Logout_class'];
-        $output .= '"><i class="fa icon-logout"></i>';
-        $output .= $options['Logout_string'];
-        $output .= '</a>';
-        
-        return $output;
+        if ( is_user_logged_in() ) {
 
-    } else {
+            $output = '<a href="';
+            $output .= $options['Account_link'];
+            $output .= '" class="';
+            $output .= $options['Account_class'];
+            $output .= '"><i class="fa icon-user"></i>';
+            $output .= $options['Account_string']; 
+            $output .= '</a> | <a href="';
+            $output .= $options['Logout_link'];
+            $output .= '" class="';
+            $output .= $options['Logout_class'];
+            $output .= '"><i class="fa icon-logout"></i>';
+            $output .= $options['Logout_string'];
+            $output .= '</a>';
+            
+            return $output;
 
-        $output = '<a href="';
-        $output .= $options['Login_link'];
-        $output .= '" class="';
-        $output .= $options['Login_class'];
-        $output .= '"><i class="fa icon-login"></i>';
-        $output .= $options['Login_string']; 
-        $output .= '</a>';
+        } else {
 
-        return $output;
+            $output = '<a href="';
+            $output .= $options['Login_link'];
+            $output .= '" class="';
+            $output .= $options['Login_class'];
+            $output .= '"><i class="fa icon-login"></i>';
+            $output .= $options['Login_string']; 
+            $output .= '</a>';
+
+            return $output;
+        }
     }
+    add_shortcode( 'custom_login', 'custom_login_shortcode' );
+    add_action ('init', 'custom_login_shortcode');
+    
 }
-add_shortcode( 'custom_login', 'custom_login_shortcode' );
-add_action ('init', 'custom_login_shortcode');
-
 /*---------------------------------------------------*/
 /*          Custom login shortcode - end             */
 /*---------------------------------------------------*/

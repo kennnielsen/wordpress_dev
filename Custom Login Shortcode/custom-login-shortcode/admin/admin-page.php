@@ -31,7 +31,6 @@ if(!current_user_can('manage_options'))
             $options = get_option('clsc_options_array');
 
             settings_fields('clsc-settings-group');
-            do_settings_fields('clsc-settings-group'); 
 
             ?>          
             <div class="bootstrap-wrapper">
