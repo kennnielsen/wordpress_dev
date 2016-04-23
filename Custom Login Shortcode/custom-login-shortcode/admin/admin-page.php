@@ -23,7 +23,14 @@ if(!current_user_can('manage_options'))
 
     </script>
 
-    <div class="wrap">
+    <div class="bootstrap-wrapper">
+
+    	<div class="row">
+            <div class="col-md-12">
+                <h1><?php _e('Custom Login Shortcode','clsc'); ?></h1>
+                <p><?php _e('To use for shortcode:','clsc'); ?><br/><span class="shortcode-preview">[custom_login]</span></p>
+            </div>
+        </div>
 
         <form method="post" action="options.php"> 
             <?php 
@@ -32,14 +39,7 @@ if(!current_user_can('manage_options'))
 
             settings_fields('clsc-settings-group');
 
-            ?>          
-            <div class="bootstrap-wrapper">
-	            <div class="row">
-	                <div class="col-md-12">
-	                    <h1><?php _e('Custom Login Shortcode','clsc'); ?></h1>
-	                    <p><?php _e('To use for shortcode:','clsc'); ?><br/><span class="shortcode-preview">[custom_login]</span></p>
-	                </div>
-	            </div>
+            ?>
 	            <div class="row" id="login-content">
 	                <div class="col-md-4">
 	                    <h5><?php _e('Log in link:','clsc'); ?></h5>
@@ -87,8 +87,7 @@ if(!current_user_can('manage_options'))
 	                <div class="col-md-4">
 	                    <input class="btn btn-primary" type="submit" name="submit" id="submit" value="<?php _e('Save Changes', 'clsc') ?>" />
 	                </div>
-	            </div> 
-            </div>
+	            </div>
         </form>
     </div>
 
