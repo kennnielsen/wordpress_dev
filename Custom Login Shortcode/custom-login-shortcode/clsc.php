@@ -49,17 +49,17 @@ if (!function_exists(custom_login_shortcode)) {
 
         if ( is_user_logged_in() ) {
 
-            $output = '<a href="';
+            $output = '<i class="fa icon-user"></i><a href="';
             $output .= $options['Account_link'];
             $output .= '" class="';
             $output .= $options['Account_class'];
-            $output .= '"><i class="fa icon-user"></i>';
-            $output .= $options['Account_string']; 
-            $output .= '</a> | <a href="';
+            $output .= '">';
+            $output .= $options['Account_string'];
+            $output .= '</a> | <i class="fa icon-logout"></i><a href="';
             $output .= $options['Logout_link'];
             $output .= '" class="';
             $output .= $options['Logout_class'];
-            $output .= '"><i class="fa icon-logout"></i>';
+            $output .= '">';
             $output .= $options['Logout_string'];
             $output .= '</a>';
             
@@ -67,12 +67,12 @@ if (!function_exists(custom_login_shortcode)) {
 
         } else {
 
-            $output = '<a href="';
+            $output = '<i class="fa icon-login"></i><a href="';
             $output .= $options['Login_link'];
             $output .= '" class="';
             $output .= $options['Login_class'];
-            $output .= '"><i class="fa icon-login"></i>';
-            $output .= $options['Login_string']; 
+            $output .= '">';
+            $output .= $options['Login_string'];
             $output .= '</a>';
 
             return $output;

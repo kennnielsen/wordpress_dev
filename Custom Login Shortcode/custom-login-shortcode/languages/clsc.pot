@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Custom Login Shortcode\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Wed Apr 20 2016 18:09:43 GMT+0200 (CEST)\n"
-"POT-Revision-Date: Wed Apr 20 2016 18:09:48 GMT+0200 (CEST)\n"
+"POT-Revision-Date: Wed Jun 22 2016 02:23:08 GMT+0200 (CEST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -34,99 +34,66 @@ msgstr ""
 
 #. Description of the plugin
 msgid ""
-"Add custom login shortcode to your website. When you are logged out you'll "
-"see a 'Log in'. When you are logged in, you'll see a 'My account' and a 'Log "
-"out'."
+"Adds a custom login shortcode to be used anywhere on your website. Outputs a "
+"simple href attributes with links, strings and classes defined by you."
 msgstr ""
 
 #. Author of the plugin
 msgid "Kenn Nielsen"
 msgstr ""
 
-#: ../admin/admin.php:67
+#: ../admin/admin-page.php:7
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: ../admin/admin.php:99
+#: ../admin/admin-page.php:31
 msgid "To use for shortcode:"
 msgstr ""
 
-#: ../admin/admin.php:104
+#: ../admin/admin-page.php:45
 msgid "Log in link:"
 msgstr ""
 
-#: ../admin/admin.php:105
-msgid "Example: log-in/"
+#: ../admin/admin-page.php:46 ../admin/admin-page.php:75
+msgid "Must be with leading and trailing slash. Like:"
 msgstr ""
 
-#: ../admin/admin.php:108
+#: ../admin/admin-page.php:49
 msgid "Log in string:"
 msgstr ""
 
-#: ../admin/admin.php:109
-msgid "Example: Log in"
-msgstr ""
-
-#: ../admin/admin.php:112
+#: ../admin/admin-page.php:53
 msgid "Log in class:"
 msgstr ""
 
-#: ../admin/admin.php:113
-msgid "Example: login_style"
-msgstr ""
-
-#: ../admin/admin.php:118
+#: ../admin/admin-page.php:59
 msgid "Log out link:"
 msgstr ""
 
-#: ../admin/admin.php:119
-msgid "Example: log-out/"
-msgstr ""
-
-#: ../admin/admin.php:120
+#: ../admin/admin-page.php:61
 msgid "Use default logout link"
 msgstr ""
 
-#: ../admin/admin.php:123
+#: ../admin/admin-page.php:64
 msgid "Log out string:"
 msgstr ""
 
-#: ../admin/admin.php:124
-msgid "Example: Log out"
-msgstr ""
-
-#: ../admin/admin.php:127
+#: ../admin/admin-page.php:68
 msgid "Log out class:"
 msgstr ""
 
-#: ../admin/admin.php:128
-msgid "Example: logout_style"
-msgstr ""
-
-#: ../admin/admin.php:133
+#: ../admin/admin-page.php:74
 msgid "Account link:"
 msgstr ""
 
-#: ../admin/admin.php:134
-msgid "Example: my-account/"
-msgstr ""
-
-#: ../admin/admin.php:137
+#: ../admin/admin-page.php:78
 msgid "Account string:"
 msgstr ""
 
-#: ../admin/admin.php:138
-msgid "Example: My Account"
-msgstr ""
-
-#: ../admin/admin.php:141
+#: ../admin/admin-page.php:82
 msgid "Account class:"
 msgstr ""
 
-#: ../admin/admin.php:142
-msgid "Example: account_style"
-msgstr ""
-
-#: ../admin/admin.php:147
+#: ../admin/admin-page.php:88
 msgid "Save Changes"
 msgstr ""

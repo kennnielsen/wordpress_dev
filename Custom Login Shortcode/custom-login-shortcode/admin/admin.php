@@ -10,13 +10,13 @@ register_activation_hook( PLUGIN_MAIN_FILE, 'clsc_install');
 function clsc_install() {
 	$clsc_options = array(
 
-		'Login_link' 		=> 'log-in/',
+		'Login_link' 		=> '/log-in/',
 		'Login_string' 		=> 'Log in',
 		'Login_class'		=> '', // Default is empty to inherit theme styles
 		'Logout_link'		=> wp_logout_url( home_url()),
 		'Logout_string'		=> 'Log out',
 		'Logout_class'		=> '', // Default is empty to inherit theme styles
-		'Account_link' 		=> 'my-account/',
+		'Account_link' 		=> '/my-account/',
 		'Account_string'	=> 'My Account',
 		'Account_class'		=> '' // Default is empty to inherit theme styles
 
