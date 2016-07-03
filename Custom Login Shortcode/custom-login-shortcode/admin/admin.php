@@ -63,7 +63,7 @@ function clsc_sanitize_callback( $input ) {
 
 }
 
-// Enqueue admin scripts
+// Enqueue admin scripts and styles
 function clsc_enqueue_scripts() {
 	global $wpdb;
 	$screen = get_current_screen();
@@ -73,6 +73,7 @@ function clsc_enqueue_scripts() {
 	} 
     
     wp_enqueue_script('admin_js_bootstrap_hack', plugins_url('admin/scripts/bootstrap-hack.js', dirname(__FILE__) ) );
+    wp_enqueue_style('admin_init_styles', plugins_url('admin/css/admin_init_styles.css', dirname(__FILE__) ) );
 }
 add_action('admin_enqueue_scripts', 'clsc_enqueue_scripts' );
 
