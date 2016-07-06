@@ -55,7 +55,7 @@ function clsc_sanitize_callback( $input ) {
 	// Loop through the input and sanitize each of the values
 	foreach ($input as $key => $val) {
 
-		$new_input[ $key ] = sanitize_text_field( $val );
+		$new_input[ $key ] = $val;
 
 	}
 
